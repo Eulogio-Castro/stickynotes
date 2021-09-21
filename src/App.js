@@ -14,6 +14,7 @@ import 'react-bootstrap';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/compat/analytics';
+import firebaseLogo from './logo-built_black.svg';
 
 import { doc } from "firebase/compat/firestore";
 import { setDoc, deleteDoc } from '@firebase/firestore';
@@ -21,9 +22,11 @@ import {useAuthState} from 'react-firebase-hooks/auth/';
 import {useCollectionData} from 'react-firebase-hooks/firestore/';
 import Item from './Components/Item';
 import './App.css';
-import { CardGroup } from 'react-bootstrap';
+import { CardGroup, Row } from 'react-bootstrap';
 import { blue, red } from '@mui/material/colors';
 import { Block } from '@mui/icons-material';
+import ReactLogo from './logo.svg'
+import materialLogo from './material-ui-1.svg';
 
 
 
@@ -55,9 +58,15 @@ function App() {
     <div className="App">
       <header className="Header">
         <h1>Sticky Notes</h1>
+        <Stack direction="row" justifyContent="center" spacing={4} paddingBottom ={5}>
         
-
+        <img src = {ReactLogo} margin width="100"   alt="FirebaseLogo"></img>
+        <img src = {firebaseLogo} width="150"  alt="FirebaseLogo"></img>
+        <img src = {materialLogo} width="75"  alt="FirebaseLogo"></img>
+        </Stack>
       </header>
+
+
       <SignOut/>
 
        <div>
