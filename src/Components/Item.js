@@ -34,9 +34,9 @@ const Item = (props) =>{
 
 
     return(
-        <Card  sx={{ backgroundColor:"ivory", width: "fit-content", margin: 5}}>
+        <Card  sx={{ backgroundColor:"#fffbf0", width: "fit-content", margin: 5}}>
             <CardContent >
-                <Typography variant="h5" component="div" bgcolor ="lightsteelblue">
+                <Typography variant="h5" component="div" bgcolor ="#fff1c9">
                 {title}
                 </Typography>
                 <Typography variant="body2" whiteSpace ="pre-wrap">

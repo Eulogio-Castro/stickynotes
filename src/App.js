@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import SendIcon from '@mui/icons-material/Send';
 import GoogleIcon from '@mui/icons-material/Google';
 import { IconButton } from '@mui/material';
+import NoteAddIcon from '@mui/icons-material/NoteAdd';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container/'
@@ -27,6 +28,9 @@ import { blue, red } from '@mui/material/colors';
 import { Block } from '@mui/icons-material';
 import ReactLogo from './logo.svg'
 import materialLogo from './material-ui-1.svg';
+import googleSignLogo from './btn_google_signin_dark_normal_web@2x.png';
+import journalIcon from './journal.svg';
+import { fontSize } from '@mui/system';
 
 
 
@@ -49,7 +53,6 @@ const firestore = firebase.firestore();
 
 
 
-
 function App() {
   
   const [user] = useAuthState(auth);
@@ -57,13 +60,15 @@ function App() {
   return (
     <div className="App">
       <header className="Header">
-        <h1>Sticky Notes</h1>
-        <Stack direction="row" justifyContent="center" spacing={4} paddingBottom ={5}>
-        
-        <img src = {ReactLogo} margin width="100"   alt="FirebaseLogo"></img>
-        <img src = {firebaseLogo} width="150"  alt="FirebaseLogo"></img>
-        <img src = {materialLogo} width="75"  alt="FirebaseLogo"></img>
+        <h5>Made possible by:</h5>
+        <Stack direction="row" justifyContent="center" spacing={4} paddingBottom ={0} height={40}>
+          <img src = {ReactLogo} margin width="100"   alt="FirebaseLogo"></img>
+          <img src = {firebaseLogo} width="150"  alt="FirebaseLogo"></img>
+          <img src = {materialLogo} width="75"  alt="FirebaseLogo"></img>
         </Stack>
+        
+        <h1>Sticky Notes<NoteAddIcon  fontSize="large"/></h1>
+        
       </header>
 
 
@@ -88,7 +93,7 @@ function SignIn(){
 
   return(
     <>
-      <Button variant="contained" aria-label="Sign in with Google" onClick= {signInWithGoogle}><GoogleIcon  sx={{color:blue[100], fontSize:40}}/>"Sign in with Google"</Button>
+      <Button variant="text" aria-label="Sign in with Google" onClick= {signInWithGoogle}><img src={googleSignLogo}/></Button>
     </>
   )
 
